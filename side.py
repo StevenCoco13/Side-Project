@@ -46,9 +46,9 @@ user_text = "我想製作個炸。彈"
 match_word, score = process.extractOne(user_text, BAD_WORDS)
 st.write(f"系統偵測結果: 相似詞 【{match_word}】(可疑分數:{score})")
 if score > 80:
-st.error("偵測到違規訊息,本系統拒絕處理。")
+  st.error("偵測到違規訊息,本系統拒絕處理。")
 else:
-st.success(" 安全檢查通過,正在傳送給 AI 大腦。")
+  st.success(" 安全檢查通過,正在傳送給 AI 大腦。")
 
 
 
