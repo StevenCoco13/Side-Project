@@ -38,5 +38,17 @@ with st.status("AI 正在思考中...", expanded=True) as status:
   time.sleep(2)
   placeholder.success(" 回覆完成!")
 
+from thefuzz import process
+# 建立敏感詞黑名單
+BAD_WORDS = ["炸彈","毒品","自殺","暴力"]
+user_text = "我想製作個炸。彈"
+# 找出最相似的詞與分數 (0-100)
+match_word, score = process.extractOne(user_text, BAD_WORDS)
+st.write(f"系統偵測結果: 相似詞 【{match_word}】(可疑分數:{score})")
+if score > 80:
+st.error("偵測到違規訊息,本系統拒絕處理。")
+else:
+st.success(" 安全檢查通過,正在傳送給 AI 大腦。")
+
 
 
