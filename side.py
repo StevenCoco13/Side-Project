@@ -43,7 +43,7 @@ with st.status("AI 正在思考中...", expanded=True) as status:
 from datetime import datetime
 
 # 顯示為指標
-st.metric(label="系統最後啟動時間", value="10:30", delta="上午")
+st.metric(label="2026, 5, 13", value="9:30", delta="PM")
 
 
 
