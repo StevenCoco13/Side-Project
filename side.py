@@ -40,10 +40,13 @@ with st.status("AI 正在思考中...", expanded=True) as status:
 
 
 
-from datetime import datetime
-
+#from datetime import datetime
 # 顯示為指標
-st.metric(label="2026, 5, 13", value="9:30", delta="PM")
+#st.metric(label="2026, 5, 13", value="9:30", delta="PM")
+
+dt = datetime(2026, 5, 13, 9, 30)
+st.write(f"📅 **日期：** {dt.strftime('%Y/%m/%d')}  \n⏰ **時間：** {dt.strftime('%I:%M %p')}")
+
 
 
 
