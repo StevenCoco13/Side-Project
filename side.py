@@ -36,7 +36,7 @@ with st.status("AI 正在思考中...", expanded=True) as status:
   placeholder = st.empty()
   placeholder.warning(" 正在思考中...")
   time.sleep(2)
-  placeholder.success(" 回覆完成
+  placeholder.success(" 回覆完成!")
 
 
 
