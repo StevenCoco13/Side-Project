@@ -4,13 +4,13 @@ import time
 
 
 st.set_page_config(
-page_title="中科 AI 客服 - 闕老師實戰班",
+page_title="AI 客服 - SideProject",
 page_icon=" ",
 layout="wide" # "wide" 可利用全螢幕寬度,適合放置儀表板
 )
 
 with st.sidebar:
-  st.image("https://via.placeholder.com/150", caption="中科推廣部")
+  st.image("https://via.placeholder.com/150", caption="StevenC")
   st.title("系統控制台")
   # 建立下拉選單讓使用者切換服務
   service_type = st.selectbox(
