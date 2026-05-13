@@ -1,8 +1,8 @@
 import streamlit as st
 import google.generativeai as genai
+import time
 
-import streamlit as st
-# 頁面初始化設定
+
 st.set_page_config(
 page_title="中科 AI 客服 - 闕老師實戰班",
 page_icon=" ",
@@ -19,4 +19,24 @@ with st.sidebar:
   )
   # 增加 AI 創意度調整桿
   temp = st.slider("AI 靈活度(Temperature)", 0.0, 1.0, 0.7)
+  
+  st.divider() # 畫出一條美觀的分隔線
+  st.info(f"當前連線:{service_type}")
+
+# 使用 st.status 呈現專業的多步驟處理過程
+with st.status("AI 正在思考中...", expanded=True) as status:
+  st.write("正在讀取 Gemini API Key...")
+  time.sleep(1)
+  st.write("正在掃描輸入內容安全性...")
+  time.sleep(1)
+  st.write("正在生成最佳回覆內容...")
+  time.sleep(1)
+  status.update(label="回覆生成成功!", state="complete", expanded=False)
+  # 或者是使用 st.empty() 進行簡單的原地內容更新
+  placeholder = st.empty()
+  placeholder.warning(" 正在思考中...")
+  time.sleep(2)
+  placeholder.success(" 回覆完成!")
+
+
 
